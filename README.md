@@ -6,8 +6,8 @@ The characteristic length is H, the height of the buildings (set to 1 m). The as
 ## Mesh
 Meshing was performed using the Extrusion-Exclusion method proposed by Van Hooff and Blocken (2010) implemented on Gmsh. The mesh is generated such that the prismatic layers at boundaries have an aspect ratio of 1, after which there is growth. To generate the mesh, use:
 
-`gmsh 2d.geo -2 -o 2d.msh
-gmshToFoam 2d.msh`
+`gmsh 2d.geo -2 -o 2d.msh`
+`gmshToFoam 2d.msh`
 
 Then, in constant/polyMesh/boundary, change sides to empty, roads and buildings to wall, and atmosphere to symmetry.
 The Gmsh script is written using certain parameters for the spacing and number of prismatic elements, you can play with them as necessary. The mesh is structured and conformal. It is in 3D because OpenFOAM only accepts 3D meshes; however, there is only one layer of cells in the z direction (note that +y is up). See OpenFOAM user guide to understand this. 
