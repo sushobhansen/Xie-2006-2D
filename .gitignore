@@ -1,0 +1,7 @@
+# Ignore these files and folders
+*00
+proc*
+*.msh
+log*
+post*
+
